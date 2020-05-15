@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  deno:
+    container_name: docker-deno
+    build: .
+    ports:
+      - "3001:3001"
+    networks: 
+      - deno
+    
+networks:
+    deno:
+      external: true
